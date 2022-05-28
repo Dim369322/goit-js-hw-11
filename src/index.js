@@ -69,11 +69,11 @@ async function onLoadMore(evt){
 
 function createElements({hits}){
   const countryValues = hits.map(hit => {
-    const width = 640;
-    const newWebformatURL = hit.webformatURL.replace(width, '340');
+    // const width = 640;
+    // const newWebformatURL = hit.webformatURL.replace(width, '340');
     gallery.insertAdjacentHTML("beforeend",`<div class="photo-card">
     <a href="${hit.largeImageURL}">
-    <img src="${newWebformatURL}" alt="" loading="lazy"/>
+    <img src="${hit.webformatURL}" alt="" loading="lazy"/>
     </a>
     <div class="info">
       <p class="info-item">
