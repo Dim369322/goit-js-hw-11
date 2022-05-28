@@ -71,9 +71,6 @@ function createElements({hits}){
   const countryValues = hits.map(hit => {
     const width = 640;
     const newWebformatURL = hit.webformatURL.replace(width, '340');
-    if (newWebformatURL === false){
-      newWebformatURL = hit.largeImageURL;
-    }
     gallery.insertAdjacentHTML("beforeend",`<div class="photo-card">
     <a href="${hit.largeImageURL}">
     <img src="${newWebformatURL}" alt="" loading="lazy"/>
